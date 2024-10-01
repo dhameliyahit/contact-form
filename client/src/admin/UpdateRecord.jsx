@@ -20,7 +20,7 @@ const UpdateRecord = () => {
             toast.error("All feilds are require");
           }
           setLoading(true)
-          const res = await axios.patch(`${import.meta.env.VITE_BASE_URL}/api/v1/${param.id}`, { name, email, contactNo })
+          const res = await axios.patch(`https://contact-form-1rt6.onrender.com/api/v1/${param.id}`, { name, email, contactNo })
           toast.success("User Updated Successfully");
           navigate("/admin")
         } catch (error) {
