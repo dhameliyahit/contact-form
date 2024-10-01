@@ -3,7 +3,7 @@ import { toast } from 'react-hot-toast'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 
-const BASE_URL = import.meta.env.VITE_BASE_URL
+
 
 const ContactForm = () => {
   const [name, setName] = useState('')
@@ -18,7 +18,7 @@ const ContactForm = () => {
         toast.error("All feilds are require");
       }
       setLoading(true)
-      const res = await axios.post(`${BASE_URL}/api/v1/`, { name, email, contactNo })
+      const res = await axios.post(`https://contact-form-1rt6.onrender.com/api/v1/`, { name, email, contactNo })
       if (res.data.message === "User ALl ready exists") {
         toast.error("User Allready Exists")
         setLoading(false)
