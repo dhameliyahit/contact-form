@@ -9,7 +9,7 @@ const Admin = () => {
 
     const GetData = async() =>{
         try {
-            const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1`);
+            const res = await axios.get(`https://contact-form-1rt6.onrender.com/api/v1/`);
             console.log(res.data);
             setRecord(res.data)
         } catch (error) {
