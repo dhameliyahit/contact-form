@@ -19,7 +19,7 @@ const Admin = () => {
 
     const handleDelete = async(id)=>{
         try {
-            await axios.delete(`${import.meta.env.VITE_BASE_URL}/api/v1/${id}`)
+            await axios.delete(`https://contact-form-1rt6.onrender.com/api/v1/${id}`)
             toast.success("User Deleted Succssfully");
             GetData();
         } catch (error) {
